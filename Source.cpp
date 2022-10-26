@@ -6,7 +6,7 @@ int main()
 	int choose;
 	while (1)
 	{
-		cout << "Выберите задачу: 1 2 3 4 5" << endl;
+		cout << "Vyberite zadachu: 1 2 3 4 5" << endl;
 		cin >> choose;
 		if (choose == 1)
 		{
@@ -21,7 +21,7 @@ int main()
 			int c;
 			while (f != 0)
 			{
-				cout << "Введите число для преобразования в факториал: " << endl;
+				cout << "Vvedite chislo dlya preobrazovaniya v faktorial:" << endl;
 				cin >> c;
 				int fact = 1;
 				int c1 = c;
@@ -32,7 +32,8 @@ int main()
 				}
 				cout << fact << endl;
 				fact = 1;
-				cout << "Для завершения введите 0, для продолжения - любое другое число" << endl;
+				cout << "Dlya zaversheniya vvedite 0, dlya prodolzheniya -"
+					<< "lyuboe drugoe chislo" << endl;
 				cin >> f;
 			}
 		}
@@ -41,19 +42,19 @@ int main()
 			float perc;
 			int years;
 			float sFirst;
-			cout << "Введите начальный вклад: "<< endl;
+			cout << "Vvedite nachal'nyj vklad: "<< endl;
 			cin >> sFirst;
-			cout << "Введите число лет: " << endl;
+			cout << "Vvedite chislo let: " << endl;
 			cin >> years;
 			int years1 = years;
-			cout << "Введите процентную ставку: " << endl;
+			cout << "Vvedite procentnuyu stavku: " << endl;
 			cin >> perc;
 			float istperc = perc / 100;
 			while (years > 0) {
 				sFirst = sFirst * (1 + istperc);
 				years--;
 			}
-			cout << "Через " << years1 << " лет на счету будет: " << sFirst << endl;
+			cout << "CHerez" << years1 << " let na schetu budet: " << sFirst << endl;
 		}
 		if (choose == 4)
 		{
@@ -63,29 +64,29 @@ int main()
 			long sFirst;
 			long plata;
 			long plata1;
-			cout << "Введите стоимость квартиры: " << endl;
+			cout << "Vvedite stoimost' kvartiry: " << endl;
 			cin >> cost;
-			cout << "Введите начальный взнос: " << endl;
+			cout << "Vvedite nachal'nyj vznos: " << endl;
 			cin >> sFirst;
-			cout << "Введите число лет: " << endl;
+			cout << "Vvedite chislo let: " << endl;
 			cin >> years;
 			int years1 = years;
-			cout << "Введите процентную ставку: " << endl;
+			cout << "Vvedite procentnuyu stavku: " << endl;
 			cin >> perc;
 			float istperc = perc / 100;
 			plata = 0;
 			cost = cost - sFirst;
 			int cost1 = cost / (years);
-			cout << "Начальный взнос = " << sFirst << endl;
-			cout << "Кредит на 1 год = " << cost << endl;
+			cout << "Nachal'nyj vznos = " << sFirst << endl;
+			cout << "Kredit na 1 god = " << cost << endl;
 			while ((years) > 0) {
 				plata1 = (cost * istperc) + cost1;
-				cout << "Плата за " << years1 - (years - 1) << " год = " << plata1 << endl;
+				cout << "Plata za " << years1 - (years - 1) << " god = " << plata1 << endl;
 				plata = plata + plata1;
 				cost = (cost - cost1);
 				years--;
 			}
-			cout << "Общая сумма выплат = " << plata + sFirst << endl;
+			cout << "Obshchaya summa vyplat = " << plata + sFirst << endl;
 		}
 		if (choose == 5) 
 		{
@@ -94,16 +95,16 @@ int main()
 			char dot;
 			do {
 				f = s = p = 0;
-				cout << "Введите первое слогаемое " << endl;
+				cout << "Vvedite pervoe slogaemoe " << endl;
 				cin >> funt >> dot >> shil >> dot >> penn;
 				while (shil >= 20 or penn >= 12) {   // лучше использоваль || как или, & - как и???
-					cout << "Некорректное значение, шиллингов < 20, пенсов < 12, повторите попытку: ";
+					cout << "Nekorrektnoe znachenie, shillingov < 20, pensov < 12, povtorite popytku: ";
 					cin >> funt >> dot >> shil >> dot >> penn;
 				}
-				cout << "Введите второе слагаемое " << endl;
+				cout << "Vvedite vtoroe slagaemoe " << endl;
 				cin >> funt1 >> dot >> shil1 >> dot >> penn1;
 				while (shil1 >= 20 or penn1 >= 12) {
-					cout << "Некорректное значение, шиллингов < 20, пенсов < 12, повторите попытку: ";
+					cout << "Nekorrektnoe znachenie, shillingov < 20, pensov < 12, povtorite popytku: ";
 					cin >> funt1 >> dot >> shil1 >> dot >> penn1;
 				}
 				s = shil;
@@ -112,8 +113,8 @@ int main()
 				else { p = penn + penn1; }
 				if (s + shil1 >= 20) { f++; s = s + shil1 - 20; }
 				else { s = s + shil1; }
-				cout << "Сумма равна: " << f << dot << s << dot << p << endl;
-				cout << "Продолжить?(y/n) " << endl;
+				cout << "Summa ravna: " << f << dot << s << dot << p << endl;
+				cout << "Prodolzhit'?(y/n)" << endl;
 				cin >> start;
 			} while (start == 'y');
 		}
