@@ -97,7 +97,7 @@ int main()
 				f = s = p = 0;
 				cout << "Vvedite pervoe slogaemoe " << endl;
 				cin >> funt >> dot >> shil >> dot >> penn;
-				while (shil >= 20 or penn >= 12) {   // ëó÷øå èñïîëüçîâàëü || êàê èëè, & - êàê è???
+				while (shil >= 20 or penn >= 12) {   // Ã«Ã³Ã·Ã¸Ã¥ Ã¨Ã±Ã¯Ã®Ã«Ã¼Ã§Ã®Ã¢Ã Ã«Ã¼ || ÃªÃ Ãª Ã¨Ã«Ã¨, & - ÃªÃ Ãª Ã¨???
 					cout << "Nekorrektnoe znachenie, shillingov < 20, pensov < 12, povtorite popytku: ";
 					cin >> funt >> dot >> shil >> dot >> penn;
 				}
